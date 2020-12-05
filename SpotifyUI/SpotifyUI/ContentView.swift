@@ -57,16 +57,6 @@ struct ContentView: View {
 
 struct MusicListView: View {
     private var titles: [String] = ["Editor's choice", "Trending", "New Releases", "Popular playlist", "Mood", "Workout", "Sleep", "Detroit City"]
-    var coverImages: [String] {
-        var im: Set<String> = []
-        for _ in 1 ... 8 {
-            let imageID = String((1 ... 8).randomElement()!)
-            let imageName = "Image-\(imageID)"
-            im.insert(imageName)
-        }
-        return Array(im)
-    }
-
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
             LazyVStack(spacing: 16) {
