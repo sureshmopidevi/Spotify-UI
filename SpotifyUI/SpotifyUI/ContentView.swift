@@ -212,7 +212,7 @@ struct DetailView: View {
                         .frame(width: 16, height: 16, alignment: .center)
                         .foregroundColor(.gray)
                 }.padding()
-
+                Spacer()
                 HStack {
                     Image(systemName: "music.house.fill")
                         .resizable()
@@ -227,7 +227,6 @@ struct DetailView: View {
                         .foregroundColor(.gray)
                 }.padding(.vertical)
                     .padding(.horizontal, 20)
-                Spacer()
             }.padding()
         }.onAppear {
             setAverageColor(imageName: albumArt)
